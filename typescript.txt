@@ -1,0 +1,84 @@
+1. Cos'è TypeScript?
+
+Cos'è: TypeScript è un linguaggio di programmazione superset di JavaScript che aggiunge il tipaggio statico.
+È stato sviluppato da Microsoft e si compila in JavaScript puro.
+
+A cosa serve: Serve per scrivere codice JavaScript più robusto e mantenibile grazie alla verifica dei tipi.
+È particolarmente utile per progetti di grandi dimensioni o collaborativi.
+
+Che problema risolve: Risolve problemi legati alla mancanza di sicurezza dei tipi in JavaScript,
+riducendo errori a runtime e fornendo strumenti per il completamento del codice,
+la refattorizzazione e la documentazione automatica.
+
+Differenze con JS: TypeScript introduce tipi statici, classi e interfacce,
+che non esistono nativamente in JavaScript.
+Il codice TypeScript deve essere compilato in JavaScript prima di essere eseguito.
+
+
+
+2. Il Compilatore TypeScript
+
+Perché è necessario?: TypeScript non può essere eseguito direttamente nei browser o ambienti JavaScript; quindi, 
+il compilatore TS trasforma il codice TypeScript in JavaScript compatibile, 
+verificando al contempo eventuali errori di tipo.
+
+Come si usa: Si utilizza tramite il comando tsc (TypeScript Compiler). 
+Una volta installato TypeScript (npm install -g typescript), 
+puoi eseguire il compilatore con tsc nomefile.ts per generare il file JavaScript.
+
+
+
+
+3. Type Inference (Inferenza di Tipo)
+
+Cos'è: TypeScript può inferire automaticamente il tipo di una variabile
+quando non viene dichiarato esplicitamente.
+Ad esempio, assegnare let x = 5; farà sì che TypeScript assegni automaticamente a x il tipo number.
+
+Vantaggi: Riduce il bisogno di annotazioni manuali dei tipi, 
+mantenendo il codice conciso senza sacrificare la sicurezza del tipo.
+
+
+
+
+
+4. Il Tipo ‘any’
+
+Cos'è: Il tipo any permette di disattivare il sistema di tipaggio per una variabile. 
+Una variabile dichiarata come any può contenere qualsiasi tipo di valore.
+
+Quando usarlo: È utile quando non si conosce il 
+tipo di una variabile (ad esempio, dati provenienti da fonti esterne o librerie di terze parti).
+Tuttavia, il suo uso andrebbe limitato, poiché perde i vantaggi di sicurezza del tipo offerti da TypeScript.
+
+
+
+
+5. Il Tipo Union
+
+Cos'è: I tipi union permettono di assegnare più tipi a una variabile.
+Ad esempio, let id: number | string; indica che id può essere sia un number che una string.
+
+Quando usarlo: È utile quando una variabile può assumere valori di più tipi, 
+ad esempio quando si gestiscono input da diverse fonti o formati.
+
+
+
+
+6. Le Interfaces in TypeScript
+
+Cos'è: Le interfacce definiscono la struttura di un oggetto, 
+descrivendo le proprietà e i loro tipi. Ad esempio:
+
+interface Persona {
+  nome: string;
+  età: number;
+}
+
+
+A cosa servono: Le interfacce garantiscono che gli oggetti
+rispettino una determinata forma, 
+fornendo un contratto che il codice deve seguire.
+Vantaggi: Promuovono un codice più leggibile, modulare e meno soggetto a errori, 
+facilitando l'integrazione tra diversi componenti o moduli.
+
